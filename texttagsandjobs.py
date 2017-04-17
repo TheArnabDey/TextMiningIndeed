@@ -5,6 +5,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectPercentile, f_classif
 
 df1 = pd.DataFrame(pd.read_table('train.tsv'))
+#Pre processing and text cleaning
 df1.iloc[:,1] = df1.iloc[:,1].str.replace('.',' ')
 df1.iloc[:,1] = df1.iloc[:,1].str.replace(',',' ')
 df1.iloc[:,1] = df1.iloc[:,1].str.replace('\'',' ')
